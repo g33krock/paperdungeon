@@ -20,6 +20,7 @@ const classes = [
         "maxHealth":20,
         "aggro": 0,
         "image":"/resources/images/warrior.png",
+        "status": "ready",
         "card": [
                 {
                 "name": "strike",
@@ -72,6 +73,7 @@ const classes = [
         "maxHealth":20,
         "aggro": 0,
         "image":"/resources/images/priest.png",
+        "status": "ready",
         "card": [
             {
                 "name": "heal",
@@ -123,6 +125,7 @@ const classes = [
         "maxHealth":20,
         "aggro": 0,
         "image":"/resources/images/rogue.png",
+        "status": "ready",
         "card": [
             {
                 "name": "slice",
@@ -182,6 +185,7 @@ const monsters = [
         "class": "goblin",
         "health": 20,
         "image":"/resources/images/goblin.png",
+        "status": "ready",
         "card": [
             {
                 name: "bonk",
@@ -199,6 +203,7 @@ const monsters = [
         "class": "ogre",
         "health": 50,
         "image":"/resources/images/ogre.png",
+        "status": "ready",
         "card": [
             {
                 name: "clobber",
@@ -216,6 +221,7 @@ const monsters = [
         "class": "dragon",
         "health": 50,
         "image":"/resources/images/dragon.png",
+        "status": "ready",
         "card": [
             {
                 name: "claws",

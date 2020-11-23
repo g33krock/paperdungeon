@@ -19,17 +19,28 @@
     height: 100%;
     position: relative;
     background-image: url('../images/dungeon.png');
+    background-repeat: no-repeat;
+    background-position: center;
+    display: grid;
+    grid-template-areas: 
+    'mpunch mpunch mpunch mpunch mpunch mpunch'
+    'p1punch p1punch p2punch p2punch p3punch p3punch'
+    'card1 card1 card2 card2 card3 card3'
+    'p1NO1z p1NO2z p2NO1z p2NO2z p3NO1z p3NO2z'
+    'p1NO1 p1NO2 p2NO1 p2NO2 p3NO1 p3NO2';
+    justify-content: center;
+
   }
   .card {
     width: 50px;
     height: 50px;
     position: absolute;
   }
-  .card:hover {
+  .card:active {
     animation: shake 0.5s;
     animation-iteration-count: infinite;
   }
-  .button:hover {
+  .active {
     animation: shake 0.5s;
     animation-iteration-count: infinite;
   }
@@ -91,3 +102,67 @@
   font-size: 16px;
   margin: 5px;
 }
+
+#mpunch {
+  grid-area: mpunch;
+  display: grid;
+    grid-template-areas: 
+    'mclass';
+    justify-content: center;
+    position: relative;
+}
+#mclass {grid-area: mclass;}
+#mhealth {grid-area: mhealth;}
+#mtarget {grid-area: mtarget;}
+#maction {grid-area: maction;}
+#mdamage {grid-area: mdamage;}
+#p1punch {
+  grid-area: p1punch;
+    justify-content: center;
+    position: relative;
+}
+#p1class {grid-area: p1class;}
+#p1health {grid-area: p1health;}
+#p1target {grid-area: p1target;}
+#p1action {grid-area: p1action;}
+#p1val {grid-area: p1val;}
+#card1 {grid-area: card1;}
+#card1img {grid-area: card1img;}
+#p1NO1 {grid-area: p1NO1;}
+#p1NO1z {grid-area: p1NO1z;}
+#p1NO2 {grid-area: p1NO2;}
+#p1NO2z {grid-area: p1NO2z;}
+#p2punch {
+  grid-area: p2punch;
+    justify-content: center;
+    position: relative;
+}
+#p2class {grid-area: p2class;}
+#p2health {grid-area: p2health;}
+#p2target {grid-area: p2target;}
+#p2action {grid-area: p2action;}
+#p2val {grid-area: p2val;}
+#card2 {grid-area: card2;}
+#card2img {grid-area: card2img;}
+#p2NO1 {grid-area: p2NO1;}
+#p2NO1z {grid-area: p2NO1z;}
+#p2NO2 {grid-area: p2NO2;}
+#p2NO2z {grid-area: p2NO2z;}
+#p3punch {
+  grid-area: p3punch;
+    justify-content: center;
+    position: relative;
+}
+#p3class {grid-area: p3class;}
+#p3health {grid-area: p3health;}
+#p3target {grid-area: p3target;}
+#p3action {grid-area: p3action;}
+#p3val {grid-area: p3val;}
+#card3 {grid-area: card3;}
+#card3img {grid-area: card3img;}
+#p3NO1 {grid-area: p3NO1;}
+#p3NO1z {grid-area: p3NO1z;}
+#p3NO2 {grid-area: p3NO2;}
+#p3NO2z {grid-area: p3NO2z;}
+#horse {grid-area: horse;}
+

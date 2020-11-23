@@ -7,6 +7,7 @@ function fight() {
     card3.src = classes[2].card[player3Attack].image;
     document.getElementById('card3img').appendChild(card3).width = "100";
     
+    
 
     
     
@@ -188,16 +189,28 @@ function fight() {
 
     p1CardSelect1 = Math.floor(Math.random() * classes[0].card.length);
     document.getElementById("p1NO1").innerHTML = `${classes[0].card[p1CardSelect1].name}`;
+    p1NO1img.src = classes[0].card[p1CardSelect1].image;
+    document.getElementById("p1NO1z").appendChild(p1NO1img).width = "50";
     p1CardSelect2 = Math.floor(Math.random() * classes[0].card.length);
     document.getElementById("p1NO2").innerHTML = `${classes[0].card[p1CardSelect2].name}`;
+    p1NO2img.src = classes[0].card[p1CardSelect2].image;
+    document.getElementById("p1NO2z").appendChild(p1NO2img).width = "50";
     p2CardSelect1 = Math.floor(Math.random() * classes[1].card.length);
     document.getElementById("p2NO1").innerHTML = `${classes[1].card[p2CardSelect1].name}`;
+    p2NO1img.src = classes[1].card[p2CardSelect1].image;
+    document.getElementById("p2NO1z").appendChild(p2NO1img).width = "50";
     p2CardSelect2 = Math.floor(Math.random() * classes[1].card.length);
     document.getElementById("p2NO2").innerHTML = `${classes[1].card[p2CardSelect2].name}`;
+    p2NO2img.src = classes[1].card[p2CardSelect2].image;
+    document.getElementById("p2NO2z").appendChild(p2NO2img).width = "50";
     p3CardSelect1 = Math.floor(Math.random() * classes[2].card.length);
     document.getElementById("p3NO1").innerHTML = `${classes[2].card[p3CardSelect1].name}`;
+    p3NO1img.src = classes[2].card[p3CardSelect1].image;
+    document.getElementById("p3NO1z").appendChild(p3NO1img).width = "50";
     p3CardSelect2 = Math.floor(Math.random() * classes[2].card.length);
     document.getElementById("p3NO2").innerHTML = `${classes[2].card[p3CardSelect2].name}`;
+    p3NO2img.src = classes[2].card[p3CardSelect2].image;
+    document.getElementById("p3NO2z").appendChild(p3NO2img).width = "50";
 
     
     roundCounter[0].turn++;

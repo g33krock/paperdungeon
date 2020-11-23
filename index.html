@@ -7,68 +7,81 @@
         <script src = "/resources/fight.js"></script>
         <script src = "/resources/init.js"></script>
         <script src = "/resources/select.js"></script>
+        <script src = "/resources/order.js"></script>
     </head>
     <body onload="initCards()">
       <div id="myContainer">
-        <div class="flex-container">
-          <div id="mpunch">
+        
+          <div id="mpunch"></div>
               <p id="mclass"></p>
               <p id="mhealth"></p>
               <p id="mtarget"></p>
               <p id="maction"></p>
               <p id="mdamage"></p>
-            </div>
-        </div>
-        <div class="flex-container">
-          <div id="p1punch">
+            
+        
+          <div id="p1punch" onclick="player1()"></div>
             <p id="p1class"></p>
             <p id="p1health"></p>
             <p id="p1aggro"></p>
             <p id="p1action"></p>
-            <div id="card1" class="card">
-                <div id="card1img"></div>
+            <div id="card1" class="card" >
+                <div id="card1img" class="ready"></div>
             </div>
             <p id="p1val"></p>
-          </div>
-          <div id="p2punch">
+            
+              <div class="card" id="p1NO1z" onclick="player1Attack1()">
+                <div id="p1NO1"></div>
+              </div>
+              <div class="card" id="p1NO2z" onclick="player1Attack2()">
+                <div id="p1NO2"></div>
+              </div>
+            
+          
+          <div id="p2punch" onclick="player2()"></div>
             <p id="p2class"></p>
             <p id="p2health"></p>
             <p id="p2aggro"></p>
             <p id="p2action"></p>
-            <div id="card2" class="card">
+            <div id="card2" class="card" >
                 <div id="card2img"></div>
             </div>
             <p id="p2val"></p>
-          </div>
-          <div id="p3punch">
+            
+            <div class="card" id="p2NO1z" onclick="player2Attack1()">
+              <div id="p2NO1"></div>
+            </div>
+            <div class="card" id="p2NO2z" onclick="player2Attack2()">
+              <div id="p2NO2"></div>
+            </div>
+            
+          
+          <div id="p3punch" onclick="player3()"></div>
             <p id="p3class"></p>
             <p id="p3health"></p>
             <p id="p3aggro"></p>
             <p id="p3action"></p>
-            <div id="card3" class="card">
+            <div id="card3" class="card" >
                 <div id="card3img"></div>
             </div>
+            <div class="card" id="p3NO1z" onclick="player3Attack1()">
+              <div id="p3NO1"></div>
+            </div>
+            <div class="card" id="p3NO2z" onclick="player3Attack2()">
+              <div id="p3NO2"></div>
+            </div>
             <p id="p3val"></p>
-        </div>
-      </div>
-      <div class="flex-container">
-        <div>
-          <button id="p1NO1" onclick="player1Attack1()">P1A1</button>
-          <button id="p1NO2" onclick="player1Attack2()">P1A2</button>
-        </div>
-        <div>
-          <button id="p2NO1" onclick="player2Attack1()">P2A1</button>
-          <button id="p2NO2" onclick="player2Attack2()">P2A2</button>
-        </div>
-        <div>
-          <button id="p3NO1" onclick="player3Attack1()">P3A1</button>
-          <button id="p3NO2" onclick="player3Attack2()">P3A2</button>
-        </div>
-      </div>
-      <div class="flex-container">
+        
+      
+        
+        
+        
+      
         <button onclick="fight(), myMove()">Fight!</button>
-        <h2 id="horse">-</h2>
-      </div>
+        <h2 id="horse">
+          
+        </h2>
+      
     </div>  
     </body>
 </html>

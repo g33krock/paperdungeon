@@ -10,7 +10,13 @@ var p3img = document.createElement('img');
 var mimg = document.createElement('img');
 var card1 = document.createElement('img');
 var card2 = document.createElement('img');
-var card3 = document.createElement('img'); 
+var card3 = document.createElement('img');
+var p1NO1img = document.createElement('img');
+var p1NO2img = document.createElement('img');
+var p2NO1img = document.createElement('img');
+var p2NO2img = document.createElement('img'); 
+var p3NO1img = document.createElement('img');
+var p3NO2img = document.createElement('img');   
 
 var player1Attack = 0;
 var player2Attack = 0;
