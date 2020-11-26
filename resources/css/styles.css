@@ -22,12 +22,14 @@
     background-repeat: no-repeat;
     background-position: center;
     display: grid;
+    grid-template-columns: 'auto auto auto auto auto auto';
+    grid-template-rows: 'auto auto auto auto auto';
     grid-template-areas: 
-    'mpunch mpunch mpunch mpunch mpunch mpunch'
-    'p1punch p1punch p2punch p2punch p3punch p3punch'
-    'card1 card1 card2 card2 card3 card3'
-    'p1NO1z p1NO2z p2NO1z p2NO2z p3NO1z p3NO2z'
-    'p1NO1 p1NO2 p2NO1 p2NO2 p3NO1 p3NO2';
+    'empty4 empty4 empty4 mpunch mpunch mstats empty5 empty5 empty5'
+    'p1punch p1punch p1stats p2punch p2punch p2stats p3punch p3punch p3stats'
+    'card1 card1 empty1 card2 card2 empty2 card3 card3 empty3'
+    'p1NO1z p1NO2z empty1 p2NO1z p2NO2z empty2 p3NO1z p3NO2z empty3'
+    'p1NO1 p1NO2 empty1 p2NO1 p2NO2 empty2 p3NO1 p3NO2 empty3';
     justify-content: center;
 
   }
@@ -45,17 +47,17 @@
     animation-iteration-count: infinite;
   }
   @keyframes shake {
-    0% { transform: translate(1px, 1px) rotate(0deg); }
-    10% { transform: translate(-1px, -2px) rotate(-1deg); }
-    20% { transform: translate(-3px, 0px) rotate(1deg); }
-    30% { transform: translate(3px, 2px) rotate(0deg); }
-    40% { transform: translate(1px, -1px) rotate(1deg); }
-    50% { transform: translate(-1px, 2px) rotate(-1deg); }
-    60% { transform: translate(-3px, 1px) rotate(0deg); }
-    70% { transform: translate(3px, 1px) rotate(-1deg); }
-    80% { transform: translate(-1px, -1px) rotate(1deg); }
-    90% { transform: translate(1px, 2px) rotate(0deg); }
-    100% { transform: translate(1px, -2px) rotate(-1deg); }
+    0% { transform: translate(1px, 1px) rotate(0deg); background-image: url('../images/warrior1.png'); }
+    10% { transform: translate(-1px, -2px) rotate(-1deg); background-image: url('../images/warrior2.png'); }
+    20% { transform: translate(-3px, 0px) rotate(1deg); background-image: url('../images/warrior3.png'); }
+    30% { transform: translate(3px, 2px) rotate(0deg); background-image: url('../images/warrior4.png');}
+    40% { transform: translate(1px, -1px) rotate(1deg); background-image: url('../images/warrior5.png');}
+    50% { transform: translate(-1px, 2px) rotate(-1deg); background-image: url('../images/warrior4.png');}
+    60% { transform: translate(-3px, 1px) rotate(0deg); background-image: url('../images/warrior3.png');}
+    70% { transform: translate(3px, 1px) rotate(-1deg); background-image: url('../images/warrior2.png');}
+    80% { transform: translate(-1px, -1px) rotate(1deg); background-image: url('../images/warrior1.png');}
+    90% { transform: translate(1px, 2px) rotate(0deg); background-image: url('../images/warrior2.png');}
+    100% { transform: translate(1px, -2px) rotate(-1deg); background-image: url('../images/warrior3.png');}
   }
   .health-box {
   background-color: #ccc;
@@ -116,6 +118,11 @@
 #mtarget {grid-area: mtarget;}
 #maction {grid-area: maction;}
 #mdamage {grid-area: mdamage;}
+#empty1 {grid-area: empty1;}
+#empty2 {grid-area: empty2;}
+#empty3 {grid-area: empty3;}
+#empty4 {grid-area: empty4;}
+#empty5 {grid-area: empty5;}
 #p1punch {
   grid-area: p1punch;
     justify-content: center;
@@ -125,13 +132,23 @@
 #p1health {grid-area: p1health;}
 #p1target {grid-area: p1target;}
 #p1action {grid-area: p1action;}
+#p1aggro {grid-area: p1aggro;}
 #p1val {grid-area: p1val;}
 #card1 {grid-area: card1;}
 #card1img {grid-area: card1img;}
-#p1NO1 {grid-area: p1NO1;}
-#p1NO1z {grid-area: p1NO1z;}
-#p1NO2 {grid-area: p1NO2;}
-#p1NO2z {grid-area: p1NO2z;}
+#p1NO1 {grid-area: p1NO1;
+  position: relative;
+  right: 0px;
+}
+#p1NO1z {grid-area: p1NO1z;
+  position: relative;
+}
+#p1NO2 {grid-area: p1NO2;
+  position: relative;
+}
+#p1NO2z {grid-area: p1NO2z;
+  position: relative;
+}
 #p2punch {
   grid-area: p2punch;
     justify-content: center;
@@ -141,6 +158,7 @@
 #p2health {grid-area: p2health;}
 #p2target {grid-area: p2target;}
 #p2action {grid-area: p2action;}
+#p2aggro {grid-area: p2aggro;}
 #p2val {grid-area: p2val;}
 #card2 {grid-area: card2;}
 #card2img {grid-area: card2img;}
@@ -157,6 +175,7 @@
 #p3health {grid-area: p3health;}
 #p3target {grid-area: p3target;}
 #p3action {grid-area: p3action;}
+#p3aggro {grid-area: p3aggro;}
 #p3val {grid-area: p3val;}
 #card3 {grid-area: card3;}
 #card3img {grid-area: card3img;}
@@ -165,4 +184,51 @@
 #p3NO2 {grid-area: p3NO2;}
 #p3NO2z {grid-area: p3NO2z;}
 #horse {grid-area: horse;}
+#p1stats {
+  grid-area: p1stats;
+  position: relative;
+  display: grid;
+  grid-template-rows: 'auto auto auto auto';
+  grid-template-areas: 
+  'p1health'
+  'p1class'
+  'p1action'
+  'p1val';
+  justify-content: left;
+}
+#p2stats {
+  grid-area: p2stats;
+  position: relative;
+  display: grid;
+  grid-template-rows: 'auto auto auto auto';
+  grid-template-areas: 
+  'p2health'
+  'p2class'
+  'p2action'
+  'p2val';
+  justify-content: left;
+}
+#p3stats {
+  grid-area: p3stats;
+  position: relative;
+  display: grid;
+  grid-template-rows: 'auto auto auto auto';
+  grid-template-areas: 
+  'p3health'
+  'p3class'
+  'p3action'
+  'p3val';
+  justify-content: left;
+}
+#mstats {
+  grid-area: mstats;
+  position: relative;
+  display: grid;
+  grid-template-areas: 
+  'mhealth'
+  'mtarget'
+  'maction'
+  'mdamage';
+  justify-content: center;
+}
 

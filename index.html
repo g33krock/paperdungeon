@@ -12,76 +12,68 @@
     <body onload="initCards()">
       <div id="myContainer">
         
-          <div id="mpunch"></div>
-              <p id="mclass"></p>
-              <p id="mhealth"></p>
-              <p id="mtarget"></p>
-              <p id="maction"></p>
-              <p id="mdamage"></p>
-            
-        
-          <div id="p1punch" onclick="player1()"></div>
-            <p id="p1class"></p>
-            <p id="p1health"></p>
-            <p id="p1aggro"></p>
-            <p id="p1action"></p>
-            <div id="card1" class="card" >
-                <div id="card1img" class="ready"></div>
-            </div>
-            <p id="p1val"></p>
-            
-              <div class="card" id="p1NO1z" onclick="player1Attack1()">
-                <div id="p1NO1"></div>
-              </div>
-              <div class="card" id="p1NO2z" onclick="player1Attack2()">
-                <div id="p1NO2"></div>
-              </div>
-            
+        <div id="mpunch"></div>
+        <div id="mstats">
+            <div id="mclass"></div>
+            <div id="mhealth"></div>
+            <div id="mtarget"></div>
+            <div id="maction"></div>
+            <div id="mdamage"></div>
+        </div>
           
-          <div id="p2punch" onclick="player2()"></div>
-            <p id="p2class"></p>
-            <p id="p2health"></p>
-            <p id="p2aggro"></p>
-            <p id="p2action"></p>
-            <div id="card2" class="card" >
-                <div id="card2img"></div>
-            </div>
-            <p id="p2val"></p>
-            
-            <div class="card" id="p2NO1z" onclick="player2Attack1()">
-              <div id="p2NO1"></div>
-            </div>
-            <div class="card" id="p2NO2z" onclick="player2Attack2()">
-              <div id="p2NO2"></div>
-            </div>
-            
+      
+        <div id="p1punch" onclick="player1()"></div>
+        <div id="p1stats">
+          <div id="p1class"></div>
+          <div id="p1health"></div>
+          <div id="p1aggro"></div>
+          <div id="p1action"></div>
+          <div id="p1val"></div>
+        </div>
+        <div class="card" id="p1NO1z" onclick="player1Attack1()">
+          <div id="p1NO1"></div>
+        </div>
+        <div class="card" id="p1NO2z" onclick="player1Attack2()">
+          <div id="p1NO2"></div>
+        </div>
           
-          <div id="p3punch" onclick="player3()"></div>
-            <p id="p3class"></p>
-            <p id="p3health"></p>
-            <p id="p3aggro"></p>
-            <p id="p3action"></p>
-            <div id="card3" class="card" >
-                <div id="card3img"></div>
-            </div>
-            <div class="card" id="p3NO1z" onclick="player3Attack1()">
-              <div id="p3NO1"></div>
-            </div>
-            <div class="card" id="p3NO2z" onclick="player3Attack2()">
-              <div id="p3NO2"></div>
-            </div>
-            <p id="p3val"></p>
         
-      
+        <div id="p2punch" onclick="player2()"></div>
+        <div id="p2stats">
+          <div id="p2class"></div>
+          <div id="p2health"></div>
+          <div id="p2aggro"></div>
+          <div id="p2action"></div>
+          <div id="p2val"></div>
+        </div>
+        <div class="card" id="p2NO1z" onclick="player2Attack1()">
+          <div id="p2NO1"></div>
+        </div>
+        <div class="card" id="p2NO2z" onclick="player2Attack2()">
+          <div id="p2NO2"></div>
+        </div>
+          
         
-        
-        
-      
-        <button onclick="fight(), myMove()">Fight!</button>
+        <div id="p3punch" onclick="player3()"></div>
+        <div id="p3stats">
+          <div id="p3class"></div>
+          <div id="p3health"></div>
+          <div id="p3aggro"></div>
+          <div id="p3action"></div>
+          <div id="p3val"></div>
+        </div>
+        <div class="card" id="p3NO1z" onclick="player3Attack1()">
+          <div id="p3NO1"></div>
+        </div>
+        <div class="card" id="p3NO2z" onclick="player3Attack2()">
+          <div id="p3NO2"></div>
+        </div>
+        <div id="empty"></div>
+        <button onclick="fight()">Fight!</button>
         <h2 id="horse">
           
         </h2>
       
-    </div>  
+      </div>  
     </body>
 </html>

@@ -1,17 +1,16 @@
 function fight() {
-
-    card1.src = classes[0].card[player1Attack].image;
-    document.getElementById("card1img").appendChild(card1).width = "100";
-    card2.src = classes[1].card[player2Attack].image;
-    document.getElementById('card2img').appendChild(card2).width = "100";
-    card3.src = classes[2].card[player3Attack].image;
-    document.getElementById('card3img').appendChild(card3).width = "100";
-    
-    
-
-    
-    
-    
+    classes[0].status = "ready";
+    classes[1].status = "ready";
+    classes[2].status = "ready";
+    document.getElementById("p1punch").classList.remove('done');
+    document.getElementById("p1punch").classList.remove('active');
+    document.getElementById("p1punch").classList.add('ready');
+    document.getElementById("p2punch").classList.remove('done');
+    document.getElementById("p2punch").classList.remove('active');
+    document.getElementById("p2punch").classList.add('ready');
+    document.getElementById("p3punch").classList.remove('done');
+    document.getElementById("p3punch").classList.remove('active');
+    document.getElementById("p3punch").classList.add('ready');
 
     if (roundCounter[0] > 0) {
 
@@ -217,55 +216,3 @@ function fight() {
     document.getElementById("horse").innerHTML = `${roundCounter[0].turn}`;
 };
 
-function myMove() {
-    var monsterCoordinates = document.getElementById('mpunch');
-    var elem1 = document.getElementById("card1");
-    var elem1a = document.getElementById("p1punch");
-    var elem2 = document.getElementById("card2");
-    var elem2a = document.getElementById("p2punch");
-    var elem3 = document.getElementById("card3");
-    var elem3a = document.getElementById("p3punch");
-    var height = document.getElementById("myContainer").offsetHeight;     
-    var pos = 0;
-    var pos1 = (elem1.offsetLeft-monsterCoordinates.offsetLeft)/750;
-    var reset1h = elem1a.offsetLeft;
-    var reset1v = elem1a.offsetTop;
-    var initelem1 = elem1.offsetLeft;
-    var vinitelem1 = (elem1.offsetTop / height) * 10;
-    var pos2 = (monsterCoordinates.offsetLeft-elem2.offsetLeft)/750;
-    var reset2h = elem2a.offsetLeft;
-    var reset2v = elem2a.offsetTop;
-    var initelem2 = elem2.offsetLeft;
-    var vinitelem2 = (elem2.offsetTop / height) * 10;
-    var pos3 = (elem3.offsetLeft-monsterCoordinates.offsetLeft)/750;
-    var reset3h = elem3a.offsetLeft;
-    var reset3v = elem3a.offsetTop;
-    var initelem3 = elem3.offsetLeft;
-    var vinitelem3 = (elem3.offsetTop / height) * 10;
-    var height = document.getElementById("myContainer").offsetHeight;
-    var width = document.getElementById("myContainer").offsetWidth;
-    console.log(height, width)
-
-    var id = setInterval(frame, 1);
-    function frame() {
-      if (pos != 500) {
-        pos++; 
-        elem1.style.left = reset1h + (width * .115) + (pos1 * -pos) + 'px';  
-        elem1.style.top = reset1v + (height * .862) - pos + 'px';
-        elem2.style.left = reset2h + (width * .115) + (pos2 * -pos) + 'px';  
-        elem2.style.top = reset2v + (height * .862) -pos + 'px';
-        elem3.style.left = reset3h + (width * .115) + (pos3 * -pos) + 'px';  
-        elem3.style.top = reset3v + (height * .862) -pos + 'px';
-      } else {
-        elem1.style.left = reset1h + (width * .115) + 'px';
-        elem1.style.top = reset1v + (height * .862) + 'px';
-        elem2.style.left = reset2h + (width * .115) + 'px';
-        elem2.style.top = reset2v + (height * .862) + 'px'; 
-        elem3.style.left = reset3h + (width * .115) + 'px';
-        elem3.style.top = reset3v + (height * .862) + 'px';    
-        pos=0 + 'px';
-        clearInterval(id);
-         
-      }
-    }
-  }
